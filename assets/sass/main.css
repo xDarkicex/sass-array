@@ -1,0 +1,59 @@
+/*
+Error: Invalid CSS after "...rs-list", "$i")": expected expression (e.g. 1px, bold), was ";"
+        on line 8 of main.sass
+
+3: $background-colors-list: (#4BC2A5 #606F40 #6648CA #6B6022 #2F54E9)
+4: $border-colors-list: (#ff9900 #77ff66 #73C227 #C23E50 #7BAFC2)
+5: $colors-list: (#111 #222 #111 #444 #555)
+6: @for $i from 1 through length("$colors-list") 
+7:     .stuff-#{$i} {
+8:         color: nth("$colors-list", "$i");
+9:         background-color: nth($background-colors-list, $i);
+10:         border: 1px solid nth($border-colors-list, $i);
+11:         width:50px
+12:         height:50px
+13:     }
+
+Backtrace:
+main.sass:8
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/scss/parser.rb:1165:in `expected'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/lexer.rb:221:in `expected!'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/parser.rb:602:in `assert_done'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/parser.rb:63:in `parse'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script/parser.rb:183:in `parse'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/script.rb:27:in `parse'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:1120:in `parse_script'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:710:in `parse_property'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:681:in `parse_property_or_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:647:in `parse_line'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:525:in `build_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:544:in `block in append_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `each'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `append_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:534:in `block in build_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:527:in `each'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:527:in `build_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:544:in `block in append_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `each'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `append_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:534:in `block in build_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:527:in `each'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:527:in `build_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:544:in `block in append_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `each'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:543:in `append_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:396:in `_to_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/engine.rb:285:in `render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:407:in `run'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.13/bin/sass:13:in `<top (required)>'
+C:/Ruby22-x64/bin/sass:23:in `load'
+C:/Ruby22-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...rs-list\", \"$i\")\": expected expression (e.g. 1px, bold), was \";\"\A         on line 8 of main.sass\A \A 3: $background-colors-list: (#4BC2A5 #606F40 #6648CA #6B6022 #2F54E9)\A 4: $border-colors-list: (#ff9900 #77ff66 #73C227 #C23E50 #7BAFC2)\A 5: $colors-list: (#111 #222 #111 #444 #555)\A 6: @for $i from 1 through length(\"$colors-list\") \A 7:     .stuff-#{$i} {\A 8:         color: nth(\"$colors-list\", \"$i\");\A 9:         background-color: nth($background-colors-list, $i);\A 10:         border: 1px solid nth($border-colors-list, $i);\A 11:         width:50px\A 12:         height:50px\A 13:     }"; }

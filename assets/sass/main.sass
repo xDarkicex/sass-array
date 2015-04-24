@@ -1,4 +1,14 @@
 //Main sass file
-#main-box
-
-	background-color: #000
+//#main-box
+$background-colors-list: (#4BC2A5 #606F40 #6648CA #6B6022 #2F54E9)
+$border-colors-list: (#ff9900 #77ff66 #73C227 #C23E50 #7BAFC2)
+$colors-list: (#111 #222 #111 #444 #555)
+@for $i from 1 through length("$colors-list") 
+    .stuff-#{$i} {
+        color: nth("$colors-list", "$i");
+        background-color: nth($background-colors-list, $i);
+        border: 1px solid nth($border-colors-list, $i);
+        width:50px
+        height:50px
+    }
+}
